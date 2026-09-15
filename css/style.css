@@ -1,0 +1,786 @@
+/* ========================================
+   GRUNDINSTÄLLNINGAR
+======================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #181818;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================================
+   GEMENSAM LAYOUT
+======================================== */
+
+.content-container {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+
+  color: #c82020;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-inner {
+  width: min(1200px, calc(100% - 4rem));
+  min-height: 100px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  width: 250px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+nav a {
+  padding: 0.5rem 0;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #c82020;
+}
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: 5px 0;
+
+  background-color: #181818;
+}
+
+/* ========================================
+   KNAPPAR
+======================================== */
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.button-primary {
+  background-color: #c82020;
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  background-color: #a71919;
+}
+
+.button-secondary {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #181818;
+}
+
+.button-secondary:hover {
+  border-color: #e8e8e8;
+  background-color: #e8e8e8;
+  color: #181818;
+}
+
+/* ========================================
+   STARTSIDA
+======================================== */
+
+.hero {
+  min-height: calc(100vh - 100px);
+  padding: 5rem 2rem 6rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.58) 45%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    url("../images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #ffffff;
+}
+
+.hero-content {
+  width: min(800px, 100%);
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin-bottom: 1rem;
+
+  font-size: 5rem;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.hero .eyebrow {
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.hero-text {
+  max-width: 650px;
+  margin-bottom: 1.5rem;
+
+  color: #eeeeee;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ========================================
+   TJÄNSTER & MASKINER
+======================================== */
+
+/* Sidans introduktion */
+
+.page-intro {
+  padding: 6rem 2rem;
+
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.page-intro h1 {
+  max-width: 850px;
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.intro-text {
+  max-width: 700px;
+
+  color: #d0d0d0;
+
+  font-size: 1.2rem;
+}
+
+.intro-button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 22px;
+
+  font-size: 0.95rem;
+}
+
+/* Maskiner */
+
+.services-section {
+  padding: 6rem 2rem;
+
+  scroll-margin-top: 2rem;
+}
+
+.section-heading {
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.machine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.machine-card {
+  padding: 2.5rem;
+
+  background-color: #f4f4f4;
+  border-top: 4px solid #c82020;
+}
+
+.machine-card h3 {
+  margin-bottom: 2rem;
+
+  font-size: 1.8rem;
+}
+
+.spec-list {
+  list-style: none;
+}
+
+.spec-list li {
+  padding: 0.8rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.spec-list li:last-child {
+  border-bottom: 0;
+}
+
+.spec-list span {
+  color: #666666;
+}
+
+.machine-note {
+  max-width: 750px;
+  margin-top: 2rem;
+
+  color: #555555;
+}
+
+/* Redskap */
+
+.equipment-section {
+  padding: 6rem 2rem;
+
+  background-color: #eeeeee;
+}
+
+.equipment-section .eyebrow {
+  color: #c82020;
+}
+
+.equipment-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.equipment-layout h2 {
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.equipment-layout p {
+  max-width: 550px;
+
+  color: #555555;
+}
+
+.equipment-list ul {
+  list-style: none;
+}
+
+.equipment-list li {
+  padding: 0.9rem 0;
+
+  border-bottom: 1px solid #cccccc;
+
+  font-weight: 600;
+}
+
+/* Ställningsmontage */
+
+.scaffolding-section {
+  padding: 4.5rem 2rem;
+
+  background-color: #ffffff;
+}
+
+.scaffolding-section h2 {
+  margin-bottom: 1rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.scaffolding-section p:last-child {
+  max-width: 700px;
+
+  color: #555555;
+}
+
+/* Kontakt-CTA */
+
+.contact-cta {
+  padding: 4.5rem 2rem;
+
+  background: #555555;
+  color: #ffffff;
+}
+
+.contact-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.contact-cta h2 {
+  margin-bottom: 0.5rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-cta p:last-child {
+  color: #d0d0d0;
+}
+
+/* ========================================
+   KONTAKT
+======================================== */
+
+.contact-hero {
+  padding: 5.5rem 2rem;
+
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.contact-hero h1 {
+  max-width: 800px;
+  margin-bottom: 1.25rem;
+
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.contact-intro {
+  max-width: 650px;
+
+  color: #d0d0d0;
+
+  font-size: 1.15rem;
+}
+
+/* Formulär + kontaktuppgifter */
+
+.contact-section {
+  padding: 5.5rem 2rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  align-items: start;
+}
+
+/* Vänster kolumn */
+
+.contact-form-column h2,
+.contact-info-column h2 {
+  margin-bottom: 2rem;
+
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+
+  font: inherit;
+
+  background-color: #ffffff;
+
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #c82020;
+}
+
+.form-button {
+  margin-top: 0.5rem;
+
+  border: 0;
+  cursor: pointer;
+}
+
+/* Höger kolumn */
+
+.price-note {
+  margin-bottom: 2rem;
+
+  color: #555555;
+}
+
+.company-details {
+  margin: 0;
+}
+
+.company-details div {
+  padding: 0.85rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+.company-details dt {
+  color: #666666;
+}
+
+.company-details dd {
+  margin: 0;
+
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Instagram på kontaktsidan */
+
+.contact-instagram {
+  width: 100%;
+  padding: 4.5rem 2rem;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.contact-instagram .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.instagram-icon {
+  width: 1.2em;
+  height: 1.2em;
+  object-fit: contain;
+}
+
+.contact-instagram a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  color: #181818;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+}
+.instagram-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.contact-instagram a:hover {
+  color: #c82020;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  padding: 1.25rem 2rem;
+
+  background-color: #181818;
+  color: #ffffff;
+
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   MOBIL
+======================================== */
+
+@media (max-width: 700px) {
+  /* Gemensamt */
+
+  .content-container {
+    width: min(100% - 3rem, 1200px);
+  }
+
+  /* Header */
+
+  .header-inner {
+    position: relative;
+
+    width: calc(100% - 3rem);
+    min-height: 90px;
+    gap: 1rem;
+  }
+
+  .logo img {
+    width: 180px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: -1.5rem;
+    right: -1.5rem;
+
+    display: none;
+
+    background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 0;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+
+    font-size: 1rem;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .main-nav li:last-child a {
+    border-bottom: 0;
+  }
+
+  /* Startsida */
+
+  .hero {
+    min-height: calc(100vh - 90px);
+    padding: 3rem 1.5rem 4rem;
+
+    align-items: flex-end;
+
+    background-position: center;
+  }
+
+  .hero h1 {
+    max-width: 1000px;
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(5rem, 7vw, 8rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-text {
+    max-width: 650px;
+    margin-bottom: 2.5rem;
+
+    color: #eeeeee;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Tjänster */
+
+  .page-intro {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .services-section,
+  .equipment-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .machine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .machine-card {
+    padding: 1.75rem;
+  }
+
+  .equipment-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .scaffolding-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .contact-cta {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .contact-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  /* Kontakt */
+
+  .contact-hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contact-form-column h2,
+  .contact-info-column h2 {
+    font-size: 1.5rem;
+  }
+
+  .company-details div {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .company-details dd {
+    text-align: left;
+  }
+
+  .contact-instagram {
+    padding: 3rem 1.5rem;
+  }
+}

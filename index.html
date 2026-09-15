@@ -10,13 +10,59 @@
   </head>
 
   <body>
-    <header>
-      <h1>Eklind Lyft & Ställningsmontage AB</h1>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">
+          <img src="images/logo.png" alt="Eklind Lyft & Ställningsmontage AB" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Huvudmeny">
+          <ul>
+            <li><a class="active" href="index.html">Start</a></li>
+            <li><a href="tjanster.html">Tjänster &amp; maskiner</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <p>Hemsidan är under utveckling.</p>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Eklind Lyft & Ställningsmontage AB</p>
+
+          <h1>Din lokala expert på lyft och ställning</h1>
+
+          <p class="hero-text">i [område] med omnejd.</p>
+
+          <div class="hero-buttons">
+            <a class="button button-primary" href="tjanster.html">
+              Mer om oss
+            </a>
+
+            <a class="button button-secondary" href="kontakt.html">
+              Kontakta oss
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Eklind Lyft & Ställningsmontage AB</p>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>

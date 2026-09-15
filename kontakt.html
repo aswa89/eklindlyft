@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kontakt | Eklind Lyft & Ställningsmontage AB</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">
+          <img src="images/logo.png" alt="Eklind Lyft & Ställningsmontage AB" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Huvudmeny">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li>
+              <a href="tjanster.html">Tjänster &amp; maskiner</a>
+            </li>
+            <li>
+              <a class="active" href="kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Kontaktintro -->
+      <section class="contact-hero">
+        <div class="content-container">
+          <p class="eyebrow">Kontakt</p>
+
+          <h1>Behöver du ett lyft?</h1>
+
+          <p class="contact-intro">
+            Om du undrar över något, vill göra en offertförfrågan eller om du
+            bara vill säga hej så kan du skicka ett meddelande till oss nedan.
+          </p>
+        </div>
+      </section>
+
+      <!-- Formulär och kontaktuppgifter -->
+      <section class="contact-section">
+        <div class="content-container contact-layout">
+          <!-- Vänster kolumn -->
+          <div class="contact-form-column">
+            <p class="eyebrow">Förfrågan</p>
+
+            <h2>Berätta vad du behöver hjälp med</h2>
+
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-post</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Beskriv uppdraget</label>
+                <textarea id="message" name="message" rows="6"></textarea>
+              </div>
+
+              <button class="button button-primary form-button" type="submit">
+                Skicka förfrågan
+              </button>
+            </form>
+          </div>
+
+          <!-- Höger kolumn -->
+          <div class="contact-info-column">
+            <p class="eyebrow">Företagsuppgifter</p>
+
+            <h2>Eklind Lyft & Ställningsmontage AB</h2>
+
+            <dl class="company-details">
+              <div>
+                <dt>Telefon</dt>
+                <dd>
+                  <a href="tel:+46706183820">070-618 38 20</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Adress</dt>
+                <dd>
+                  Brattberget 167<br />
+                  732 94 Arboga
+                </dd>
+              </div>
+
+              <div>
+                <dt>Organisationsnummer</dt>
+                <dd>559062-7153</dd>
+              </div>
+
+              <div>
+                <dt>VAT-nummer</dt>
+                <dd>SE559062715301</dd>
+              </div>
+
+              <div>
+                <dt>Betalningsvillkor</dt>
+                <dd>30 dagar netto</dd>
+              </div>
+
+              <div>
+                <dt>Bankgiro</dt>
+                <dd>641-3066</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instagram -->
+      <section class="contact-instagram">
+        <div class="content-container">
+          <p class="eyebrow">Se våra arbeten</p>
+
+          <a
+            href="https://www.instagram.com/eklindlyft/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Följ Eklind Lyft på Instagram</span>
+            <img class="instagram-icon" src="images/instagram.svg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Eklind Lyft & Ställningsmontage AB</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
